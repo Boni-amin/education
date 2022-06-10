@@ -48,22 +48,33 @@
    =========================================================-->
   <section class="navbar-area" id="home">
     <div class="container">
+      <!-- logo  -->
      <div class="nav">
-      <div class="logo">
-        <h1>EDUCATION</h1>
-      </div>
-      <nav class="menu">
-        <ul id="nav">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">about</a></li>
-          <li><a href="#courses">courses</a></li>
-          <li><a href="#gallery">gallery</a></li>
-          <li><a href="javascript:void(0)">blog</a></li>
-          <li><a href="#contact">contact</a></li>
-          <li><a href="#">Book now</a></li>
-        </ul>
-      </nav>
+        <div class="logo">
+          <a href="index.html"><h1>EDUCATION</h1></a>
+        </div>
+
+        <!-- Menu  -->
+        <div class="menu-icon" onclick="menuIcon(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+
+        <nav class="menu">
+          <ul id="nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#courses">COURSES</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="javascript:void(0)">BLOG</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#">Book Now</a></li>
+          </ul>
+        </nav>
+
      </div>
+
     </div>
   </section>
   <!--========================================================
@@ -217,7 +228,7 @@
 
       <div class="popular-course">
         <!-- Popular single box   -->
-        <div class="popular-sinle-box">
+        <div class="popular-sinle-box popular-sinle-box1">
           <div class="popular-sinle-box-img">
             <img src="assets/images/banner-4.jpg" alt="images-">
           </div>
@@ -236,7 +247,7 @@
           </div>
         </div>
 
-        <div class="popular-sinle-box">
+        <div class="popular-sinle-box popular-sinle-box2">
           <div class="popular-sinle-box-img">
             <img src="assets/images/banner-4.jpg" alt="images">
           </div>
@@ -250,12 +261,12 @@
               </div>
             </div>
             <div class="popular-balance">
-              <h2>$60</h2>
+              <h2>$80</h2>
             </div>
           </div>
         </div>
 
-        <div class="popular-sinle-box">
+        <div class="popular-sinle-box popular-sinle-box3">
           <div class="popular-sinle-box-img">
             <img src="assets/images/banner-4.jpg" alt="images-couses">
           </div>
@@ -269,26 +280,28 @@
               </div>
             </div>
             <div class="popular-balance">
-              <h2>$60</h2>
+              <h2>$75</h2>
             </div>
           </div>
         </div>
 
-        <div class="popular-sinle-box">
-          <div class="popular-sinle-box-img">
-            <img src="assets/images/banner-4.jpg" alt="images-couses">
-          </div>
-          <div class="popular-sinle-box-content">
-            <div class="popular-text-box">
-              <h2>Photoshop learning</h2>
-              <span>By admin / 15 janu 2022</span>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              <div class="banner-btn popular-btn">
-                <button type="button" class="button-edu">learn now</button>
-              </div>
+        <div class="popular-sinle-box popular-sinle-box4">
+          <div class="popular-sinle-box4">
+            <div class="popular-sinle-box-img">
+              <img src="assets/images/banner-4.jpg" alt="images-couses">
             </div>
-            <div class="popular-balance">
-              <h2>$60</h2>
+            <div class="popular-sinle-box-content">
+              <div class="popular-text-box">
+                <h2>Photoshop learning</h2>
+                <span>By admin / 15 janu 2022</span>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="banner-btn popular-btn">
+                  <button type="button" class="button-edu">learn now</button>
+                </div>
+              </div>
+              <div class="popular-balance">
+                <h2>$94</h2>
+              </div>
             </div>
           </div>
         </div>
@@ -375,7 +388,7 @@
   
         <div class="contact-logo">
           <div class="logo">
-            <h1>EDUCATION</h1>
+            <h1 class="contact-logo">EDUCATION</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
           </div>
         </div>
@@ -412,8 +425,6 @@
     </div>
   </section>
 
-  <!-- scrollTop Button  -->
-  <!-- <a href="javascript:void(0)"  id="return"><i class="fa-solid fa-arrow-up"></i></a> -->
 
 
    
@@ -436,28 +447,18 @@
       <script src="plugin/one-page/onepage-nav.js"></script>
     <!-- Custom js  -->
     <script>
-     
-    </script>
+        function menuIcon(x) {
+          x.classList.toggle("change");
+        }
 
+        $(document).ready(function(){
+          $(".menu-icon").click(function(){
+            $('.menu').toggleClass('open-menu')
+          });
+        });
+    </script>
     <script>
         $(document).ready(function() {
-
-        // Scroll up button width jquery 
-          // $(window).on("scroll", function(){
-          //   if($(this).scrollTop() > 80){
-          //     $('#return').addClass('scroll-top')
-          //   } else {
-          //     $('#return').removeClass('scroll-top')
-          //   }
-
-          //   $('#return').click(function(){
-          //     $('html, body').animate({
-          //       scrollTop: 0
-          //     }, 500)
-          //   })
-
-          // })
-
 
       // Scroll nav width jquery 
       $(window).scroll( function(){

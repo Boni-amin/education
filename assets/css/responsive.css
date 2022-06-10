@@ -6,17 +6,20 @@ vX-Small devices (portrait phones, less than 576px)
         width: 100%;
         padding:  0 15px;
     }
+    .title h1 {
+        font-size: 30px;
+    }
 /* Header area srat  */
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .h-right{
+        margin-top: 10x;
+    }
     .navbar-area{
         padding: 25px 0;
-    }
-    .nav{
-        display: flex;
-        flex-direction: column;
     } 
-    .main-header {
-        font-size: 10px;
-    }
     /* Navbar area start  */
     .navbar-area {
         padding: 16px 0 18px 0;
@@ -43,6 +46,41 @@ vX-Small devices (portrait phones, less than 576px)
     .sticky {
         padding: 20px 0;
     }
+
+    .menu {
+        width: 100%;
+        height: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        transition: .4s ease;
+        overflow: hidden; /* ---- important problem solv ---- */
+    }
+    
+    .open-menu {
+        visibility: visible;
+        height: 80vh;
+    }
+    .menu ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu ul li {
+        margin: 8px;
+    }
+    .menu ul li a {
+        color: #fff;
+    }
+    
+    .menu-icon{
+        display: block;
+    }
+
     /* Banner area start  */
     .banner {
         padding: 85px 0 95px 0;
@@ -59,29 +97,29 @@ vX-Small devices (portrait phones, less than 576px)
     }
     /* Teacher area start  */
     .teacher-area {
-        padding: 50px 0 50px 0;
+        padding: 62px 0 50px 0;
     }
     .teacher {
         grid-template-columns: 1fr;
-        grid-row-gap: 40px;
-        margin-top: 70px;
+        grid-row-gap: 25px;
+        margin-top: 55px;
     }
     .teacher-single {
         padding: 0 27px;
     }
-    .title h1 {
-        font-size: 30px;
+    .banner-title h1 {
+        font-size: 50px;
     }
     .title::before {
-        top: 49px;
+        top: 43px;
     }
     .title::after {
-        top: 43px;
+        top: 37px;
     }
 
      /* Study Area Start  */ 
      .study-area {
-        padding: 55px 0;
+        padding: 64px 0 70px 0;
     }
      .study {
         grid-template-columns: 1fr;
@@ -89,23 +127,54 @@ vX-Small devices (portrait phones, less than 576px)
     .study-video {
         display: none;
     }
+    .study-content-p p:first-of-type {
+        margin-top: -10px;
+    }
       /* Popular Area */
-    .popular-area {
-        padding: 55px 0 0 0;
+      .popular-area {
+        padding: 65px 0 70px 0;
     }
     .popular-course {
         grid-template-columns: repeat(1, 1fr);
         margin-top: 65px;
     }
-    .popular-sinle-box {
-        text-align: center;
-    }
     .popular-btn{
         text-align: center;
     }
+    .popular-sinle-box  {
+        text-align: center;
+        margin-bottom: 95px;
+    }
+    .popular-sinle-box-img {
+        width: 100%;
+    }
     .popular-sinle-box-content {
-        top: -57px;
-        left: 100px;
+        width: 100%;
+        top: -2px;
+        left: 0;
+        margin-bottom: -10px;
+        padding: 25px 10px 4px 0px;
+    }
+    .popular-text-box h2 {
+        font-size: 17px;
+        font-weight: 700;
+    }
+    
+    .popular-sinle-box-content::before {
+        width: 100%;
+        height: 4px;
+        right: 0px;
+        bottom: 0;
+    }
+
+    .popular-sinle-box1 {
+        margin-top: -10px;
+    }
+    .popular-sinle-box3 {
+        margin-bottom: 95px !important;
+    }
+    .popular-sinle-box4{
+        margin-bottom: 5px !important;
     }
     .popular-balance {
         width: 60px;
@@ -115,13 +184,16 @@ vX-Small devices (portrait phones, less than 576px)
     }
     .popular-balance h2 {
         font-size: 20px;
-        padding: 13px;
+        padding: 15px 3px 10px 0;
+        background-color: #ff1949;
     }
     /* Count Area Start  */
     .count-area {
         padding: 10px 0;
     }
-   
+    .count-single-area {
+        margin: 70px 0 30px 0;
+    }
     .count-box {
         flex-basis: 50%;
         margin-bottom: 45px;
@@ -134,7 +206,7 @@ vX-Small devices (portrait phones, less than 576px)
     }
     /* News area  */
     .news-area {
-        padding: 55px 0;
+        padding: 72px 0;
     }
     .news-single-area {
         grid-template-columns: auto;
@@ -144,21 +216,22 @@ vX-Small devices (portrait phones, less than 576px)
         margin-bottom: 55px;
     }
      /* contact Area Start   */
-     .contact-area {
-        padding: 55px 0;
+    .contact-area {
+        padding: 66px 0;
     }
      .contact-single-area {
         grid-template-columns: 1fr;
         text-align: center;
     }
     .contact-logo .logo p {
-        padding-right: 0;
+        padding-right: 0px;
+        margin-top: 8px;
     }
     .contact-links {
         margin: 45px 0;
     }
     .contact-title h2 {
-        margin-bottom: 20px;
+        margin-bottom: 28px;
     }
     .contact-title h2::after {
         width: 65px;
@@ -172,6 +245,9 @@ vX-Small devices (portrait phones, less than 576px)
     .fotter p {
         font-size: 15px;
     }
+    .study-area {
+        padding: 64px 0 70px 0;
+    }
 }
 /* ===================================================================
 Small devices (landscape phones, less than 768px)
@@ -182,6 +258,13 @@ Small devices (landscape phones, less than 768px)
         margin: 0 auto;
       }
         /* Navbar area start  */
+        .main-header {
+            flex-direction: column;
+            text-align: center;
+        }
+        .h-right{
+            margin-top: 10x;
+        }
         .navbar-area {
             padding: 23px 0;
         }
@@ -200,12 +283,46 @@ Small devices (landscape phones, less than 768px)
         .menu ul li:last-child a {
             display: none;
         }
+
+        .menu {
+            width: 100%;
+            height: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            transition: .4s ease;
+            overflow: hidden; /* ---- important problem solv ---- */
+        }
+        
+        .open-menu {
+            visibility: visible;
+            height: 80vh;
+        }
+        .menu ul{
+            display: flex;
+            flex-direction: column;
+        }
+        .menu ul li {
+            margin: 8px;
+        }
+        .menu ul li a {
+            color: #fff;
+        }
+        .menu-icon{
+            display: block;
+        }
+    
         /* Banner area start  */
     .banner {
         padding: 110px 0 120px 0;
     }
     .banner-title h1 {
-        font-size: 32px;
+        font-size: 55px;
     }
     .button-edu {
         padding: 10px 30px;
@@ -216,7 +333,7 @@ Small devices (landscape phones, less than 768px)
     }
     /* Teacher area start  */
     .teacher-area {
-        padding: 55px 0 55px 0;
+        padding: 62px 0 50px 0;
     }
     .teacher {
         grid-template-columns: repeat(2, 1fr);
@@ -240,15 +357,37 @@ Small devices (landscape phones, less than 768px)
      .study {
         grid-column-gap: 32px;
     }
+    .study-video {
+        margin-left: 100px;
+    }
 
     /* Popular Area */
     .popular-area {
-        padding: 55px 0 0 0;
+        padding: 61px 0 0 0;
     }
     .popular-course {
         grid-template-columns: repeat(1, 1fr);
         margin-top: 65px;
     }
+
+
+    .popular-sinle-box1 {
+        margin-top: 5px;
+    }
+    .popular-sinle-box4 {
+        margin-bottom: -25px !important;
+    }
+    .popular-sinle-box {
+       margin-bottom: -5px;
+    }
+    .popular-sinle-box-content {
+        width: 62%;
+        top: -120px;
+        left: 192px;
+        padding: 24px 20px 3px 8px;
+        margin-bottom: -10px;
+    }
+
     .popular-sinle-box {
         text-align: center;
     }
@@ -267,7 +406,10 @@ Small devices (landscape phones, less than 768px)
     }
      /* Count Area Start  */
      .count-area {
-        padding: 40px 0 40px 0;
+        padding: 20px 0 65px 0;
+    }
+    .count-single-area {
+        margin: 70px 0 30px 0;
     }
      .count-box h2 {
         font-size: 35px;
@@ -277,18 +419,17 @@ Small devices (landscape phones, less than 768px)
     }
     /* News area  */
     .news-area {
-        padding: 55px 0;
+        padding: 61px 0 70px 0;
     }
     .news-single-area {
         margin-top: 75px;
     }
     /* contact Area Start   */
     .contact-area {
-        padding: 55px 0;
+        padding: 65px 0 62px 0;
     }
     .contact-single-area {
-        grid-template-columns: 58% 40%;
-        grid-template-rows: auto auto;
+        grid-template-columns: 56% 44%;
     }
     .contact-logo .logo p {
         padding-right: 0;
@@ -299,6 +440,9 @@ Small devices (landscape phones, less than 768px)
      /* Fotter area  */
      .fotter-area {
         padding: 20px 0;
+    }
+    .study-area {
+        padding: 70px 0 70px 0;
     }
 }
 
@@ -314,9 +458,46 @@ Medium devices (tablets, less than 992px)
       .navbar-area {
         padding: 20px 0;
     }
+
+
+    .menu {
+        width: 100%;
+        height: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        transition: .4s ease;
+        overflow: hidden;  /* ---- important problem solv ---- */
+    }
+
+    .open-menu {
+        visibility: visible;
+        height: 80vh;
+    }
+    .menu ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu ul li {
+        margin: 8px;
+    }
+    .menu ul li a {
+        color: #fff;
+    }
+    
+    .menu-icon{
+        display: block;
+    }
+
     .sticky {
         padding: 22px 0;
     }
+
       .logo h1{
         font-size: 30px;
     }
@@ -342,17 +523,17 @@ Medium devices (tablets, less than 992px)
     }
 
       /* Teacher area start  */
-      .teacher-area {
-        padding: 60px 0 60px 0;
+    .teacher-area {
+        padding: 72px 0 60px 0;
     }
     .title h1 {
         font-size: 35px;
     }
     .title::before {
-        top: 55px;
+        top: 56px;
     }
     .title::after {
-        top: 48px;
+        top: 50px;
     }
     .teacher {
         grid-template-columns: repeat(2, 1fr);
@@ -361,39 +542,50 @@ Medium devices (tablets, less than 992px)
     }
     /* Study Area Start  */
     .study-area {
-        padding: 60px 0;
+        padding: 72px 0 78px 0;
     }
     .study {
         grid-column-gap: 23px;
     }
+    .study-video {
+        padding-left: 100px;
+    }
     /* News area  */
     .news-area {
-        padding: 60px 0;
+        padding: 65px 0 80px 0;
     }
     .news-single-area {
         margin-top: 80px;
     }
     /* Count area  */
     .count-area {
-        padding: 60px 0 60px 0;
+        padding: 42px 0 87px 0;
     }
     /* Popular Area */
     .popular-area {
-        padding: 60px 0 0 0;
+        padding: 70px 0 0 0;
     }
     .popular-course {
         grid-template-columns: repeat(1, 1fr);
         margin-top: 75px;
     }
-    .popular-sinle-box {
-        margin-top: 0px;
+    .popular-sinle-box1 {
+        margin-top: 5px;
+    }
+    .popular-sinle-box4 {
+        margin-bottom: -20px !important;
+    }
+    .popular-sinle-box-content {
+        top: -120px;
+        left: 236px;
+        margin-bottom: -10px;
     }
     .popular-btn{
         text-align: center;
     }
     /* contact Area Start   */
     .contact-area {
-        padding: 60px 0;
+        padding: 73px 0 71px 0;
     }
      .contact-single-area {
         grid-template-columns: 45% 25% 25%;
@@ -425,17 +617,17 @@ Large devices (desktops, less than 1200px)
       .logo h1{
         font-size: 28px;
     }
-    .menu ul li {
-        margin-left: 14px;
-    }
     .menu ul li:last-child a {
         padding: 10px 23px;
     }
-    /* BAnner area start  */
+    /* Banner area start  */
     .banner {
         padding: 90px 0 0 0;
     }
     /* online center banner   */
+    .popular-area {
+        padding: 93px 0 10px 0;
+    }
     .online-center {
         padding: 30px 35px 40px 50px;
         background-color: #fff;
@@ -443,11 +635,41 @@ Large devices (desktops, less than 1200px)
         position: relative;
         top: 140px;
     }
+    .center-box {
+        grid-template-columns: 54% 46%;;
+    }
+    .center-box-content::after{
+        right: -15%;
+    }
+    .center-box-content h2 {
+        font-size: 33px;
+    }
+    .popular-sinle-box-img {
+        width: 75%;
+    }
+    .popular-sinle-box-content {
+        width: 77%;
+        padding: 18px 11px 1px 19px;
+        top: -94px;
+        left: 113px;
+    }
+    .popular-balance {
+        width: 70px;
+        height: 55px;
+        top: -56px;
+        right: 10px;
+    }
+    .popular-balance h2 {
+        padding: 19px 3px 10px 0px;
+    }
     /* Teacher area start  */
     .teacher-area {
         padding: 270px 0 80px 0;
     }
     /*contact Area Start   */
+    .count-area {
+        padding: 65px 0 105px 0;
+    }
     .contact-single-area {
         grid-template-columns: 45% 25% 25%;
     }
@@ -464,6 +686,14 @@ X-Large devices (large desktops, less than 1400px)
         max-width: 1140px;
         margin: 0 auto;
       }
+
+      /* online center banner   */
+      .popular-sinle-box-content {
+        padding: 22px 22px 7px 24px;
+        top: -110px;
+    }
+
+    
 }
 
 /* ===================================================================
@@ -474,6 +704,10 @@ XX-Large devices (larger desktops)
         max-width: 1320px;
         margin: 0 auto;
       }
+      /* Popular area  */
+      .popular-sinle-box3, .popular-sinle-box4 {
+        margin-bottom: -38px !important;
+    }
 }
 
 
