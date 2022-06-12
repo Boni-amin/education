@@ -1,3 +1,3 @@
-��#� �e�d�u�c�a�t�i�o�n�
-�#### https://boni-amin.github.io/education/
-�
+�� #Education Template
+� #### https://boni-amin.github.io/education/
+
