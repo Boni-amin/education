@@ -1,3 +1,3 @@
 �� # Live Link 
- � #### https://boni-amin.github.io/education/
+ � https://boni-amin.github.io/education/
 
